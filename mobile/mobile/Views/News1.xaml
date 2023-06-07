@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:mobile"
+             x:Class="mobile.Views.News1"
+             Title="Главная">
+    <ScrollView>
+        <StackLayout Orientation="Vertical">
+            <StackLayout Orientation="Vertical" Margin="20,20,20,0">
+                <Label Text="{Binding date_n}" x:Name="da" FontSize="18" WidthRequest="300" HorizontalOptions="Start" TextColor="#8b8b8b"/>
+                <Label Text="{Binding zag}" x:Name="za" FontSize="18" Margin="10,10,10,10" TextColor="Black" FontAttributes="Bold"/>
+                <Label Text="{Binding txt}" x:Name="tx" FontSize="15" TextColor="Black"/>
+                <Image Source="{Binding img}" x:Name="im" VerticalOptions="Center" Margin="10"/>
+                <Label Text="{Binding txt1}" x:Name="tx1" FontSize="15" TextColor="Black"/>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

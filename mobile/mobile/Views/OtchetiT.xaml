@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:mobile"
+             x:Class="mobile.Views.OtchetiT">
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="TextTransform" Value="None"/>
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Orientation="Vertical" Margin="0,0,0,0">
+                <Label x:Name="lb1" TextColor="#2196f3" HorizontalOptions="End" Margin="0,15,10,10" FontAttributes="Bold"/>
+                <Label x:Name="lb" TextColor="Black" HorizontalOptions="Start" Margin="10,0,10,10" FontAttributes="Bold" FontSize="18"/>
+                <ListView x:Name="myListView" ItemsSource="{Binding}" ItemSelected="OnItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.View>
+                                    <StackLayout Orientation="Horizontal" Margin="0,0,0,10">
+                                        <Label Text="{Binding id_d}" FontSize="14" TextColor="Black"/>
+                                        <Label Text="{Binding fio_u}" FontSize="14" TextColor="Black"/>
+                                        <Label Text="{Binding ssilka}" FontSize="14" TextColor="Black"/>
+                                        <Label Text="{Binding date_o}" FontSize="14" TextColor="Black"/>
+                                    </StackLayout>
+                                </ViewCell.View>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

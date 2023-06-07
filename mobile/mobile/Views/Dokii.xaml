@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:mobile"
+             x:Class="mobile.Views.Dokii">
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="TextTransform" Value="None"/>
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Orientation="Vertical" Margin="0,0,0,0">
+                <Label x:Name="lb1" TextColor="#2196f3" HorizontalOptions="End" Margin="0,15,10,10" FontAttributes="Bold"/>
+                <Label x:Name="lb" TextColor="Black" HorizontalOptions="Start" Margin="10,0,10,20" FontAttributes="Bold" FontSize="18"/>
+                <local:CustomListView x:Name="myListView" RowHeight="60">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Vertical">
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                                        <Image Source="dok.png" HeightRequest="40" WidthRequest="40"/>
+                                        <Button CornerRadius="0" BackgroundColor="Transparent" 
+                                Text="{Binding name_d}" 
+                                VerticalOptions="Center" HorizontalOptions="Start" Margin="0,0,0,0" 
+                                WidthRequest="280" HeightRequest="60" Padding="5" 
+                                FontAttributes="Bold"
+                                Clicked="Button_Clicked"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </local:CustomListView>
+                <local:CustomListView x:Name="myListView1" IsVisible="false" RowHeight="60">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Vertical">
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                                        <Image Source="skrepka.png" HeightRequest="40" WidthRequest="40"/>
+                                        <Button CornerRadius="0" BackgroundColor="Transparent" 
+                                Text="{Binding name_d}" 
+                                VerticalOptions="Center" HorizontalOptions="Start" Margin="0,0,0,0" 
+                                WidthRequest="280" HeightRequest="60" Padding="5" 
+                                FontAttributes="Bold"
+                                Clicked="Button_Clicked_1"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </local:CustomListView>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

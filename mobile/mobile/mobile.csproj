@@ -1,0 +1,111 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="bbkai.db" />
+    <None Remove="bbkai1.db" />
+    <None Remove="bbkai2.db" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="bbkai.db" />
+    <EmbeddedResource Include="bbkai1.db" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.13" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
+    <PackageReference Include="SQLiteNetExtensions" Version="2.1.0" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2578" />  
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\Admin.xaml.cs">
+      <DependentUpon>Admin.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\DiscsA.xaml.cs">
+      <DependentUpon>DiscsA.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\DiscPage.xaml.cs">
+      <DependentUpon>DiscPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\OtchetiT.xaml.cs">
+      <DependentUpon>OtchetiT.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\DokiiT1.xaml.cs">
+      <DependentUpon>DokiiT1.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\GroupsA.xaml.cs">
+      <DependentUpon>GroupsA.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\GroupPage.xaml.cs">
+      <DependentUpon>GroupPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\GDPage.xaml.cs">
+      <DependentUpon>GDPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\UDPage.xaml.cs">
+      <DependentUpon>UDPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\GDsA.xaml.cs">
+      <DependentUpon>GDsA.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\DokiPage.xaml.cs">
+      <DependentUpon>DokiPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\UserPage.xaml.cs">
+      <DependentUpon>UserPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\UDsA.xaml.cs">
+      <DependentUpon>UDsA.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\UsersA.xaml.cs">
+      <DependentUpon>UsersA.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\NewsA.xaml.cs">
+      <DependentUpon>NewsA.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\News1.xaml.cs">
+      <DependentUpon>News1.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Chet1.xaml.cs">
+      <DependentUpon>Chet1.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\AddOtchet.xaml.cs">
+      <DependentUpon>AddOtchet.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\NeChet1.xaml.cs">
+      <DependentUpon>NeChet1.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\NeChet.xaml.cs">
+      <DependentUpon>NeChet.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Dokii.xaml.cs">
+      <DependentUpon>Dokii.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Papki.xaml.cs">
+      <DependentUpon>Papki.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\Chet.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Disc.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\NewsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Rasp.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

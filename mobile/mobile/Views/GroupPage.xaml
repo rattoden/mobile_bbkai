@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mobile.Views.GroupPage">
+    <ContentPage.Content>
+        <StackLayout Margin="30,30,30,0">
+            <Label Text="Номер группы" TextColor="Black"/>
+            <StackLayout BackgroundColor="White">
+                <StackLayout BackgroundColor="Gray" Padding="1">
+                    <Entry Text="{Binding num_g}" BackgroundColor="White" TextColor="Black" x:Name="nu"/>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,20,0,0">
+                <Button Text="Сохранить" Clicked="Button_Clicked" BackgroundColor="#2196f3" TextTransform="None"/>
+                <Button Text="Удалить" Clicked="Button_Clicked_1" BackgroundColor="#2196f3" TextTransform="None"/>
+                <Button Text="Отмена" Clicked="Button_Clicked_2" BackgroundColor="#2196f3" TextTransform="None"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

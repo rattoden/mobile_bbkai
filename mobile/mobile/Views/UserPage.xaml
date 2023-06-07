@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mobile.Views.UserPage">
+    <ContentPage.Content>
+        <StackLayout Margin="30,30,30,0">
+            <Label Text="Логин" TextColor="Black"/>
+            <StackLayout BackgroundColor="White">
+                <StackLayout BackgroundColor="Gray" Padding="1">
+                    <Entry Text="{Binding login_u}" BackgroundColor="White" TextColor="Black" x:Name="lo"/>
+                </StackLayout>
+            </StackLayout>
+            <Label Text="Пароль" TextColor="Black"/>
+            <StackLayout BackgroundColor="White">
+                <StackLayout BackgroundColor="Gray" Padding="1">
+                    <Entry Text="{Binding pass_u}" BackgroundColor="White" TextColor="Black" x:Name="pa"/>
+                </StackLayout>
+            </StackLayout>
+            <Label Text="Роль" TextColor="Black"/>
+            <StackLayout BackgroundColor="White">
+                <StackLayout BackgroundColor="Gray" Padding="1">
+                    <Picker x:Name="ro" BackgroundColor="White" TextColor="Black" SelectedIndexChanged="picker_SelectedIndexChanged"
+                                    WidthRequest="100" HorizontalTextAlignment="Center" HeightRequest="40" 
+                                    FontSize="18" ItemsSource="{Binding Data}"/>
+                </StackLayout>
+            </StackLayout>
+            <Label Text="ФИО" TextColor="Black"/>
+            <StackLayout BackgroundColor="White">
+                <StackLayout BackgroundColor="Gray" Padding="1">
+                    <Entry Text="{Binding fio_u}" BackgroundColor="White" TextColor="Black" x:Name="fi"/>
+                </StackLayout>
+            </StackLayout>
+            <Label Text="Группа" TextColor="Black" x:Name="label"/>
+            <StackLayout BackgroundColor="White" x:Name="stack">
+                <StackLayout BackgroundColor="Gray" Padding="1">
+                    <Picker x:Name="gr" BackgroundColor="White" TextColor="Black"
+                                    WidthRequest="100" HorizontalTextAlignment="Center" HeightRequest="40" 
+                                    FontSize="18" ItemsSource="{Binding Data1}"/>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,20,0,0">
+                <Button Text="Сохранить" Clicked="Button_Clicked" BackgroundColor="#2196f3" TextTransform="None"/>
+                <Button Text="Удалить" Clicked="Button_Clicked_1" BackgroundColor="#2196f3" TextTransform="None"/>
+                <Button Text="Отмена" Clicked="Button_Clicked_2" BackgroundColor="#2196f3" TextTransform="None"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

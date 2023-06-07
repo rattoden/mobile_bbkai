@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mobile.Views.GDPage">
+    <ContentPage.Content>
+        <StackLayout Margin="30,30,30,0">
+            <Label Text="Группа" TextColor="Black"/>
+            <StackLayout BackgroundColor="White">
+                <StackLayout BackgroundColor="Gray" Padding="1">
+                    <Picker x:Name="nu" BackgroundColor="White" TextColor="Black"
+                                    WidthRequest="100" HorizontalTextAlignment="Center" HeightRequest="40" 
+                                    FontSize="18" ItemsSource="{Binding Data}"/>
+                </StackLayout>
+            </StackLayout>
+            <Label Text="Дисциплина" TextColor="Black"/>
+            <StackLayout BackgroundColor="White">
+                <StackLayout BackgroundColor="Gray" Padding="1">
+                    <Picker x:Name="na" BackgroundColor="White" TextColor="Black"
+                                    WidthRequest="100" HorizontalTextAlignment="Center" HeightRequest="40" 
+                                    FontSize="18" ItemsSource="{Binding Data1}"/>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,20,0,0">
+                <Button Text="Сохранить" Clicked="Button_Clicked" BackgroundColor="#2196f3" TextTransform="None"/>
+                <Button Text="Удалить" Clicked="Button_Clicked_1" BackgroundColor="#2196f3" TextTransform="None"/>
+                <Button Text="Отмена" Clicked="Button_Clicked_2" BackgroundColor="#2196f3" TextTransform="None"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mobile.Views.DokiPage">
+    <ContentPage.Content>
+        <StackLayout Margin="30,30,30,0">
+            <Label Text="Вид занятия" TextColor="Black"/>
+            <StackLayout BackgroundColor="White">
+                <StackLayout BackgroundColor="Gray" Padding="1">
+                    <Entry BackgroundColor="White" TextColor="Black" x:Name="vi" IsReadOnly="True"/>
+                </StackLayout>
+            </StackLayout>
+            <Label Text="Дисциплина" TextColor="Black"/>
+            <StackLayout BackgroundColor="White">
+                <StackLayout BackgroundColor="Gray" Padding="1">
+                    <Entry BackgroundColor="White" TextColor="Black" x:Name="di" IsReadOnly="True"/>
+                </StackLayout>
+            </StackLayout>
+            <Label Text="Название документа" TextColor="Black"/>
+            <StackLayout BackgroundColor="White">
+                <StackLayout BackgroundColor="Gray" Padding="1">
+                    <Entry BackgroundColor="White" TextColor="Black" x:Name="na"/>
+                </StackLayout>
+            </StackLayout>
+            <Label Text="Ссылка на документ" TextColor="Black"/>
+            <StackLayout BackgroundColor="White">
+                <StackLayout BackgroundColor="Gray" Padding="1">
+                    <Entry BackgroundColor="White" TextColor="Black" x:Name="ss"/>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Отчёт" TextColor="Black" Margin="0,5,0,0"/>
+                <CheckBox x:Name="ot" BackgroundColor="White" Margin="10,0,0,0"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,20,0,0">
+                <Button Text="Сохранить" Clicked="Button_Clicked" BackgroundColor="#2196f3" TextTransform="None"/>
+                <Button Text="Удалить" Clicked="Button_Clicked_1" BackgroundColor="#2196f3" TextTransform="None"/>
+                <Button Text="Отмена" Clicked="Button_Clicked_2" BackgroundColor="#2196f3" TextTransform="None"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

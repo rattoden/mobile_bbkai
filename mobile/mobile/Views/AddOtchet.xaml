@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="mobile.Views.AddOtchet">
+    <ContentPage.Content>
+        <Grid BackgroundColor="White">
+            <StackLayout Orientation="Vertical" Margin="20,0,20,0">
+                <Label x:Name="lb1" TextColor="#2196f3" HorizontalOptions="End" Margin="0,15,10,100" FontAttributes="Bold"/>
+                <Label x:Name="lb" TextColor="Black" HorizontalOptions="Start" Margin="0,0,0,20" FontAttributes="Bold" FontSize="18"/>
+                <Label Text="Ссылка на отчёт" TextColor="Black" FontSize="20"/>
+                <StackLayout BackgroundColor="White">
+                    <StackLayout BackgroundColor="#b7b7b7" Padding="1">
+                        <Entry BackgroundColor="White" TextColor="Black" x:Name="ot"/>
+                    </StackLayout>
+                </StackLayout>
+                <Button Margin="60,30,60,0" VerticalOptions="Center" Text="Отправить" Clicked="Button_Clicked"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

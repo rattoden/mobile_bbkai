@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:mobile"
+             mc:Ignorable="d"
+             x:Class="mobile.Views.NewsA">
+    <ContentPage.Content>
+        <Grid BackgroundColor="White">
+            <StackLayout Margin="20,20,20,20" Orientation="Vertical">
+                <Label Text="Новости" TextColor="Black" FontAttributes="Bold" FontSize="18" Margin="0,0,0,20"/>
+                <ListView x:Name="myListView" ItemsSource="{Binding}" ItemSelected="OnItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.View>
+                                    <StackLayout Orientation="Horizontal" Margin="0,0,0,10">
+                                        <Label Text="{Binding id}" FontSize="14" TextColor="Black"/>
+                                        <Label Text="{Binding zag}" FontSize="14" TextColor="Black"/>
+                                    </StackLayout>
+                                </ViewCell.View>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView> 
+                <Button Text="Добавить" Clicked="Button_Clicked" BackgroundColor="#2196f3" TextTransform="None" Margin="30,0,30,20"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

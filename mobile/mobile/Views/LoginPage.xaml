@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="mobile.Views.LoginPage"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Content>
+        <Grid BackgroundColor="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="9*"/>
+            </Grid.RowDefinitions>
+            <StackLayout Orientation="Horizontal" Grid.Row="0" HorizontalOptions="Fill" VerticalOptions="Fill" Background="#2196f3">
+                <StackLayout VerticalOptions="Center" Margin="140,0,0,0">
+                    <Label Text="BbKai" FontSize="30" />
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Padding="30,0,30,0" VerticalOptions="Center" Grid.Row="1" Orientation="Vertical" Margin="0,-70,0,0">
+                <Label Text="Логин" TextColor="Black" FontSize="20"/>
+                <StackLayout BackgroundColor="White">
+                    <StackLayout BackgroundColor="#b7b7b7" Padding="1">
+                        <Entry BackgroundColor="White" TextColor="Black" x:Name="log"/>
+                    </StackLayout>
+                </StackLayout>
+                <Label Text="Пароль" TextColor="Black" FontSize="20"/>
+                <StackLayout BackgroundColor="White">
+                    <StackLayout BackgroundColor="#b7b7b7" Padding="1">
+                        <Entry BackgroundColor="White" TextColor="Black" IsPassword="True" x:Name="pas"/>
+                    </StackLayout>
+                </StackLayout>
+                <Button Margin="60,30,60,0" VerticalOptions="Center" Text="Войти" Clicked="Button_Clicked"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

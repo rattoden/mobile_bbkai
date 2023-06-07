@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:mobile"
+             x:Class="mobile.Views.Chet1" Title="Расписание">
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="Black"/>
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Orientation="Vertical" Margin="15,0,15,20">
+                <Label Text="{Binding Text}" TextColor="Black" FontAttributes="Bold" FontSize="18" Margin="0,20,0,0"/>
+                <Label Text="Понедельник" TextColor="#2196f3" FontAttributes="Bold" FontSize="20" Margin="0,20,0,20"/>
+                <StackLayout>
+                    <local:CustomListView ItemsSource="{Binding Data1}" RowHeight="150" HasUnevenRows="True" x:Name="lv1">
+                        <ListView.Header>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" Text="Время" FontAttributes="Bold" />
+                                <Label Grid.Column="1" Text="Дата" FontAttributes="Bold" />
+                                <Label Grid.Column="2" Text="Группа" FontAttributes="Bold" />
+                                <Label Grid.Column="3" Text="Дисциплина" FontAttributes="Bold" />
+                                <Label Grid.Column="4" Text="Вид занятия" FontAttributes="Bold" />
+                                <Label Grid.Column="5" Text="Аудитория" FontAttributes="Bold" />
+                                <Label Grid.Column="6" Text="Здание" FontAttributes="Bold" />
+                            </Grid>
+                        </ListView.Header>
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Label Text="{Binding name_t}" Grid.Column="0"/>
+                                        <Label Text="{Binding date_r}" Grid.Column="1"/>
+                                        <Label Text="{Binding num_g}" Grid.Column="2"/>
+                                        <Label Text="{Binding name_d}" Grid.Column="3"/>
+                                        <Label Text="{Binding name_v}" Grid.Column="4"/>
+                                        <Label Text="{Binding aud_r}" Grid.Column="5"/>
+                                        <Label Text="{Binding zd_r}" Grid.Column="6"/>
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </local:CustomListView>
+                </StackLayout>
+                <Label Text="Вторник" TextColor="#2196f3" FontAttributes="Bold" FontSize="20" Margin="0,20,0,20"/>
+                <local:CustomListView ItemsSource="{Binding Data2}" RowHeight="150" HasUnevenRows="True" x:Name="lv2">
+                    <ListView.Header>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Text="Время" FontAttributes="Bold" />
+                            <Label Grid.Column="1" Text="Дата" FontAttributes="Bold" />
+                            <Label Grid.Column="2" Text="Группа" FontAttributes="Bold" />
+                            <Label Grid.Column="3" Text="Дисциплина" FontAttributes="Bold" />
+                            <Label Grid.Column="4" Text="Вид занятия" FontAttributes="Bold" />
+                            <Label Grid.Column="5" Text="Аудитория" FontAttributes="Bold" />
+                            <Label Grid.Column="6" Text="Здание" FontAttributes="Bold" />
+                        </Grid>
+                    </ListView.Header>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding name_t}" Grid.Column="0"/>
+                                    <Label Text="{Binding date_r}" Grid.Column="1"/>
+                                    <Label Text="{Binding num_g}" Grid.Column="2"/>
+                                    <Label Text="{Binding name_d}" Grid.Column="3"/>
+                                    <Label Text="{Binding name_v}" Grid.Column="4"/>
+                                    <Label Text="{Binding aud_r}" Grid.Column="5"/>
+                                    <Label Text="{Binding zd_r}" Grid.Column="6"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </local:CustomListView>
+                <Label Text="Среда" TextColor="#2196f3" FontAttributes="Bold" FontSize="20" Margin="0,20,0,20"/>
+                <local:CustomListView ItemsSource="{Binding Data3}" RowHeight="150" x:Name="lv3">
+                    <ListView.Header>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Text="Время" FontAttributes="Bold" />
+                            <Label Grid.Column="1" Text="Дата" FontAttributes="Bold" />
+                            <Label Grid.Column="2" Text="Группа" FontAttributes="Bold" />
+                            <Label Grid.Column="3" Text="Дисциплина" FontAttributes="Bold" />
+                            <Label Grid.Column="4" Text="Вид занятия" FontAttributes="Bold" />
+                            <Label Grid.Column="5" Text="Аудитория" FontAttributes="Bold" />
+                            <Label Grid.Column="6" Text="Здание" FontAttributes="Bold" />
+                        </Grid>
+                    </ListView.Header>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding name_t}" Grid.Column="0"/>
+                                    <Label Text="{Binding date_r}" Grid.Column="1"/>
+                                    <Label Text="{Binding num_g}" Grid.Column="2"/>
+                                    <Label Text="{Binding name_d}" Grid.Column="3"/>
+                                    <Label Text="{Binding name_v}" Grid.Column="4"/>
+                                    <Label Text="{Binding aud_r}" Grid.Column="5"/>
+                                    <Label Text="{Binding zd_r}" Grid.Column="6"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </local:CustomListView>
+                <Label Text="Четверг" TextColor="#2196f3" FontAttributes="Bold" FontSize="20" Margin="0,20,0,20"/>
+                <local:CustomListView ItemsSource="{Binding Data4}" RowHeight="150" x:Name="lv4">
+                    <ListView.Header>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Text="Время" FontAttributes="Bold" />
+                            <Label Grid.Column="1" Text="Дата" FontAttributes="Bold" />
+                            <Label Grid.Column="2" Text="Группа" FontAttributes="Bold" />
+                            <Label Grid.Column="3" Text="Дисциплина" FontAttributes="Bold" />
+                            <Label Grid.Column="4" Text="Вид занятия" FontAttributes="Bold" />
+                            <Label Grid.Column="5" Text="Аудитория" FontAttributes="Bold" />
+                            <Label Grid.Column="6" Text="Здание" FontAttributes="Bold" />
+                        </Grid>
+                    </ListView.Header>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding name_t}" Grid.Column="0"/>
+                                    <Label Text="{Binding date_r}" Grid.Column="1"/>
+                                    <Label Text="{Binding num_g}" Grid.Column="2"/>
+                                    <Label Text="{Binding name_d}" Grid.Column="3"/>
+                                    <Label Text="{Binding name_v}" Grid.Column="4"/>
+                                    <Label Text="{Binding aud_r}" Grid.Column="5"/>
+                                    <Label Text="{Binding zd_r}" Grid.Column="6"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </local:CustomListView>
+                <Label Text="Пятница" TextColor="#2196f3" FontAttributes="Bold" FontSize="20" Margin="0,20,0,20"/>
+                <local:CustomListView ItemsSource="{Binding Data5}" RowHeight="150" x:Name="lv5">
+                    <ListView.Header>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Text="Время" FontAttributes="Bold" />
+                            <Label Grid.Column="1" Text="Дата" FontAttributes="Bold" />
+                            <Label Grid.Column="2" Text="Группа" FontAttributes="Bold" />
+                            <Label Grid.Column="3" Text="Дисциплина" FontAttributes="Bold" />
+                            <Label Grid.Column="4" Text="Вид занятия" FontAttributes="Bold" />
+                            <Label Grid.Column="5" Text="Аудитория" FontAttributes="Bold" />
+                            <Label Grid.Column="6" Text="Здание" FontAttributes="Bold" />
+                        </Grid>
+                    </ListView.Header>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding name_t}" Grid.Column="0"/>
+                                    <Label Text="{Binding date_r}" Grid.Column="1"/>
+                                    <Label Text="{Binding num_g}" Grid.Column="2"/>
+                                    <Label Text="{Binding name_d}" Grid.Column="3"/>
+                                    <Label Text="{Binding name_v}" Grid.Column="4"/>
+                                    <Label Text="{Binding aud_r}" Grid.Column="5"/>
+                                    <Label Text="{Binding zd_r}" Grid.Column="6"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </local:CustomListView>
+                <Label Text="Суббота" TextColor="#2196f3" FontAttributes="Bold" FontSize="20" Margin="0,20,0,20"/>
+                <local:CustomListView ItemsSource="{Binding Data6}" RowHeight="150" x:Name="lv6">
+                    <ListView.Header>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Text="Время" FontAttributes="Bold" />
+                            <Label Grid.Column="1" Text="Дата" FontAttributes="Bold" />
+                            <Label Grid.Column="2" Text="Группа" FontAttributes="Bold" />
+                            <Label Grid.Column="3" Text="Дисциплина" FontAttributes="Bold" />
+                            <Label Grid.Column="4" Text="Вид занятия" FontAttributes="Bold" />
+                            <Label Grid.Column="5" Text="Аудитория" FontAttributes="Bold" />
+                            <Label Grid.Column="6" Text="Здание" FontAttributes="Bold" />
+                        </Grid>
+                    </ListView.Header>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding name_t}" Grid.Column="0"/>
+                                    <Label Text="{Binding date_r}" Grid.Column="1"/>
+                                    <Label Text="{Binding num_g}" Grid.Column="2"/>
+                                    <Label Text="{Binding name_d}" Grid.Column="3"/>
+                                    <Label Text="{Binding name_v}" Grid.Column="4"/>
+                                    <Label Text="{Binding aud_r}" Grid.Column="5"/>
+                                    <Label Text="{Binding zd_r}" Grid.Column="6"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </local:CustomListView>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

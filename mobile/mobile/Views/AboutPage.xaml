@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:mobile"
+             x:Class="mobile.Views.AboutPage"
+             Title="Главная">
+    <ScrollView>
+        <StackLayout Orientation="Vertical">
+            <local:CustomListView x:Name="myListView" RowHeight="400">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" Margin="0,30,0,0">
+                                <StackLayout Orientation="Horizontal">
+                                    <local:CustomButton Text="{Binding zag}" FontSize="18" Margin="30,0" TextColor="Black" FontAttributes="Bold" Clicked="Button_Clicked" BackgroundColor="Transparent" TextTransform="None" WidthRequest="200"/>
+                                    <Label Text="{Binding date_n}" FontSize="18" WidthRequest="300" TextColor="#8b8b8b"/>
+                                </StackLayout>
+                                <Label Text="{Binding txt}" FontSize="14" Padding="30,0,30,0" TextColor="Black"/>
+                                <Image Source="{Binding img}" VerticalOptions="Center" Margin="10"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </local:CustomListView>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

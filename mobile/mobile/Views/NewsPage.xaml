@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mobile.Views.NewsPage">
+    <ContentPage.Content>
+        <StackLayout Margin="30,30,30,0">
+            <Label Text="Дата" TextColor="Black"/>
+            <StackLayout BackgroundColor="White">
+                <StackLayout BackgroundColor="Gray" Padding="1">
+                    <Entry Text="{Binding date_n}" BackgroundColor="White" TextColor="Black" IsReadOnly="True" x:Name="da"/>
+                </StackLayout>
+            </StackLayout>
+            <Label Text="Фото" TextColor="Black"/>
+            <StackLayout BackgroundColor="White">
+                <StackLayout BackgroundColor="Gray" Padding="1">
+                    <Entry Text="{Binding img}" BackgroundColor="White" TextColor="Black" x:Name="im"/>
+                </StackLayout>
+            </StackLayout>
+            <Label Text="Заголовок" TextColor="Black"/>
+            <StackLayout BackgroundColor="White">
+                <StackLayout BackgroundColor="Gray" Padding="1">
+                    <Entry Text="{Binding zag}" BackgroundColor="White" TextColor="Black" x:Name="za"/>
+                </StackLayout>
+            </StackLayout>
+            <Label Text="Краткий текст" TextColor="Black"/>
+            <StackLayout BackgroundColor="White">
+                <StackLayout BackgroundColor="Gray" Padding="1">
+                    <Entry Text="{Binding txt}" BackgroundColor="White" TextColor="Black" x:Name="tx"/>
+                </StackLayout>
+            </StackLayout>
+            <Label Text="Полный текст" TextColor="Black"/>
+            <StackLayout BackgroundColor="White">
+                <StackLayout BackgroundColor="Gray" Padding="1">
+                    <Entry Text="{Binding txt1}" BackgroundColor="White" TextColor="Black" x:Name="tx1"/>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,20,0,0">
+                <Button Text="Сохранить" Clicked="Button_Clicked" BackgroundColor="#2196f3" TextTransform="None"/>
+                <Button Text="Удалить" Clicked="Button_Clicked_1" BackgroundColor="#2196f3" TextTransform="None"/>
+                <Button Text="Отмена" Clicked="Button_Clicked_2" BackgroundColor="#2196f3" TextTransform="None"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
